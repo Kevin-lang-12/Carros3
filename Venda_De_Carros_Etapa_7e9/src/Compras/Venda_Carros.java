@@ -345,14 +345,26 @@ String Pagamento = FormaPagamentoCarros.getSelectedItem().toString();
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
-    public void calc(){
-        double quantidade = Double.parseDouble(QuantidadeCarros.getText());  
+public void calc() {
+        double quantidade = Double.parseDouble(QuantidadeCarros.getText());
 
         double produto1 = 72900.00;
+        double produto2 = 56900.00;
+        double produto3 = 67900.00;
+        double produto4 = 61900.00;
+        double produto5 = 675950.00;
+        double produto6 = 1920000.00;
+        double produto7 = 417900.00;
+        double produto8 = 7290000.00;
+        double produto9 = 14900.00;
+        double produto10 = 27900.00;
+        double produto11 = 69900.00;
+        double produto12 = 215900.00;
+        double produto13 = 69900.00;
+        double produto14 = 55900.00;
+        double produto15 = 67900.00;
 
-         
-        
-    if(ComboBoxCarros.getSelectedItem().equals("Jeep Renegade Sport 1.8 4x2 Flex 16v Aut")){
+        if(ComboBoxCarros.getSelectedItem().equals("Jeep Renegade Sport 1.8 4x2 Flex 16v Aut")){
        String Resultado1;
         double res1;
         res1 = (quantidade * produto1);
@@ -360,11 +372,120 @@ String Pagamento = FormaPagamentoCarros.getSelectedItem().toString();
         TotalCarros.setText(Resultado1);
         String add1 = String.valueOf(produto1);
         }
-    }
-    
-    public int multiplicar(int quantidade, int produto1) {
-        return quantidade * produto1;
+     if(ComboBoxCarros.getSelectedItem().equals("Chevrolet Onix Hatch Joy 1.0 8v Flex 5p Mec")){
+        String Resultado2;
+        double res2;
+        res2 = (quantidade * produto2);
+        Resultado2 = String.valueOf(res2);
+        TotalCarros.setText(Resultado2);
+        String add2 = String.valueOf(produto2);
+        }
+     if(ComboBoxCarros.getSelectedItem().equals("Chevrolet Prisma Sed. Lt 1.4 8v Flexpower 4p")){
+        String Resultado3;
+        double res3;
+        res3 = (quantidade * produto3);
+        Resultado3 = String.valueOf(res3);
+        TotalCarros.setText(Resultado3);
+        String add3 = String.valueOf(produto3);
+        }
+    if(ComboBoxCarros.getSelectedItem().equals("Chevrolet Spin Activ7 1.8 8v Econo.flex 5p Aut")){
+        String Resultado4;
+        double res4;
+        res4 = (quantidade * produto4);
+        Resultado4 = String.valueOf(res4);
+        TotalCarros.setText(Resultado4);
+        String add4 = String.valueOf(produto4);
+        }
+     if(ComboBoxCarros.getSelectedItem().equals("Volvo S90")){
+        String Resultado5;
+        double res5;
+        res5 = (quantidade * produto5);
+        Resultado5 = String.valueOf(res5);
+        TotalCarros.setText(Resultado5);
+        String add5 = String.valueOf(produto5);
+        }
+     if(ComboBoxCarros.getSelectedItem().equals("Porsche 911 GT3 RS 992")){
+        String Resultado6;
+        double res6;
+        res6 = (quantidade * produto6);
+        Resultado6 = String.valueOf(res6);
+        TotalCarros.setText(Resultado6);
+        String add6 = String.valueOf(produto6);
+        }
+    if(ComboBoxCarros.getSelectedItem().equals("Chevrolet Camaro 6.2 SS")){
+        String Resultado7;
+        double res7;
+        res7 = (quantidade * produto7);
+        Resultado7 = String.valueOf(res7);
+        TotalCarros.setText(Resultado7);
+        String add7 = String.valueOf(produto7);
+        }
+     if(ComboBoxCarros.getSelectedItem().equals("Fiat Strada 1.4 Cd Hard Working")){
+        String Resultado8;
+        double res8;
+        res8 = (quantidade * produto8);
+        Resultado8 = String.valueOf(res8);
+        TotalCarros.setText(Resultado8);
+        String add8 = String.valueOf(produto8);
+        }
+     if(ComboBoxCarros.getSelectedItem().equals("Volkswagen Santana 1.8 Mi")){
+        String Resultado9;
+        double res9;
+        res9 = (quantidade * produto9);
+        Resultado9 = String.valueOf(res9);
+        TotalCarros.setText(Resultado9);
+        String add9 = String.valueOf(produto9);
+        }
+    if(ComboBoxCarros.getSelectedItem().equals("Fiat Siena 1.0/ex 1.0 Mpi Fire/fire Flex 8v")){
+       String Resultado10;
+        double res10;
+        res10 = (quantidade * produto10);
+        Resultado10 = String.valueOf(res10);
+        TotalCarros.setText(Resultado10);
+        String add10 = String.valueOf(produto10);
+        }
+     if(ComboBoxCarros.getSelectedItem().equals("Volkswagen Fusca Null")){
+       String Resultado11;
+        double res11;
+        res11 = (quantidade * produto11);
+        Resultado11 = String.valueOf(res11);
+        TotalCarros.setText(Resultado11);
+        String add11 = String.valueOf(produto11);
+        }
+     if(ComboBoxCarros.getSelectedItem().equals("Toyota Hilux Cd Srx 4x4 2.8 Tdi 16v Diesel Aut")){
+       String Resultado12;
+        double res12;
+        res12 = (quantidade * produto12);
+        Resultado12 = String.valueOf(res12);
+        TotalCarros.setText(Resultado12);
+        String add12 = String.valueOf(produto12);
+        }
+    if(ComboBoxCarros.getSelectedItem().equals("Ford F-1000 Ss")){
+       String Resultado13;
+        double res13;
+        res13 = (quantidade * produto13);
+        Resultado13 = String.valueOf(res13);
+        TotalCarros.setText(Resultado13);
+        String add13 = String.valueOf(produto13);
+        }
+     if(ComboBoxCarros.getSelectedItem().equals("Citroën Aircross Live 1.5 Flex 8v 5p Mec.")){
+       String Resultado14;
+        double res14;
+        res14 = (quantidade * produto14);
+        Resultado14 = String.valueOf(res14);
+        TotalCarros.setText(Resultado14);
+        String add14 = String.valueOf(produto14);
+        }
+     if(ComboBoxCarros.getSelectedItem().equals("Kia Sportage 4x2 Mt Lx 2.0 4p")){
+       String Resultado15;
+        double res15;
+        res15 = (quantidade * produto15);
+        Resultado15 = String.valueOf(res15);
+        TotalCarros.setText(Resultado15);
+        String add15 = String.valueOf(produto15);
     }
 }
+}
+
 
 
