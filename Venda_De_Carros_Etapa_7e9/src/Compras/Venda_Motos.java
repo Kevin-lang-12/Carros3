@@ -5,6 +5,7 @@
 package Compras;
 
 import Data.CarrosDAO;
+import Data.Moto;
 import Data.MotoDAO;
 import beans.Carros;
 import beans.Motos;
@@ -36,7 +37,7 @@ public class Venda_Motos extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        TxtPesquisarMotos = new javax.swing.JTextField();
         BtnPesquisarMoto = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         FormaPagamentoMotos = new javax.swing.JComboBox<>();
@@ -167,7 +168,7 @@ public class Venda_Motos extends javax.swing.JFrame {
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel2)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(TxtPesquisarMotos, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(BtnPesquisarMoto)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 79, Short.MAX_VALUE)
@@ -186,7 +187,7 @@ public class Venda_Motos extends javax.swing.JFrame {
                     .addComponent(jLabel3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(TxtPesquisarMotos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(BtnPesquisarMoto)
                     .addComponent(FormaPagamentoMotos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(4, 4, 4)
@@ -277,7 +278,15 @@ String Pagamento = FormaPagamentoMotos.getSelectedItem().toString();
     }//GEN-LAST:event_BrnComprarActionPerformed
 
     private void BtnPesquisarMotoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnPesquisarMotoActionPerformed
-        // TODO add your handling code here:
+            String NomeMoto = TxtPesquisarMotos.getText();
+        MotoDAO motosDAO = new MotoDAO();
+        Moto motos = motosDAO.getMotoNome(NomeMoto);
+        if (motos == null) {
+            JOptionPane.showMessageDialog(this, "produto não encontrado!");
+        } else {
+
+            ComboBoxMotos.setSelectedItem(motos.getProduto());
+        }
     }//GEN-LAST:event_BtnPesquisarMotoActionPerformed
 
     /**
@@ -325,6 +334,7 @@ String Pagamento = FormaPagamentoMotos.getSelectedItem().toString();
     private javax.swing.JComboBox<String> FormaPagamentoMotos;
     private javax.swing.JTextField QuantidadeMotos;
     private javax.swing.JTextField TotalMotos;
+    private javax.swing.JTextField TxtPesquisarMotos;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -332,7 +342,6 @@ String Pagamento = FormaPagamentoMotos.getSelectedItem().toString();
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 public void calc(){
         double quantidade = Double.parseDouble(QuantidadeMotos.getText());  
